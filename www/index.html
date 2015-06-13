@@ -1,0 +1,241 @@
+﻿<!DOCTYPE html>
+<html ng-app="kZoneApp" lang="en">
+<head>
+    <title>Desi Tv Guide</title>
+    <meta charset="utf-8">
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1">-->
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="Content/main.css" rel="stylesheet" />
+
+    <link href="Content/view_animage.css" rel="stylesheet" />
+
+    <link href="Content/loading-bar.min.css" rel="stylesheet" />
+
+    <script src="Scripts/jquery-1.9.1.min.js"></script>
+    <link href="Content/jquery.mmenu.all.css" rel="stylesheet" />
+    <script src="Scripts/jquery.mmenu.min.all.js"></script>
+
+
+
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#my-menu").mmenu({
+
+                navbar: { title: "Desi Tv Home" }
+            });
+
+            var API = $("#my-menu").data("mmenu");
+
+            $("#nav-mmenu").click(function () {
+                API.open();
+            });
+            $(".my-close-button").click(function () {
+                API.close();
+            });
+
+
+        });
+    </script>
+</head>
+<body ng-controller="mainController">
+    <div class="containter-fluid">
+        <div id="header_menu">
+            <div id="top_menuBar">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 ">
+                        <div style="display:table;width:100%;">
+                            <div style="display:table-row">
+                                <div class="" style="display:table-cell;width:5%">
+                                    <div ng-show="isBlogsPage" class="valign">
+                                        <a href="" id="nav-mmenu">
+                                            <img height="28px" src="Content/images/meniicon.png" />
+                                        </a>
+                                    </div>
+                                    <div ng-show="!isBlogsPage" class="valign">
+                                        <a href="" ng-click="goBack()">
+                                            <img height="23" src="Content/images/Back-50.png" />
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="valign text-center" style="display:table-cell;width:85%;overflow:hidden">
+                                    <b>{{TitleBar | limitTo: 45}}</b>
+                                </div>
+                                <div ng-show="!showSearch" class="valign text-right" style="display:table-cell;width:10%">
+                                    <a href="#/postBlog" class="btn btn-default">New Post</a>
+                                </div>
+                                <div ng-show="showSearch" class="valign text-right" style="display:table-cell;width:10%">
+                                    <a href="" onclick="$('#srhBox').toggle();$('#srch-term').focus()" class=" btn btn-default">Search</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="row" style="display:none;" id="srhBox">
+                    <div class="input-group">
+                        <input type="text" ng-model="keyword" class="form-control" style="background-color:#f8f6f6" placeholder="Search Movies, Tv Shows, Sports, Songs..." name="srch-term" id="srch-term">
+                        <div class="input-group-btn">
+                            <button data-channelid="" data-relatedtovideoid="" data-videoduration="" data-videotype="" data-keyword="{{keyword}}" data-order=""
+                                    ng-click="search($event);$('#srhBox');" class="btn btn-default" type="submit">
+                                <i class="glyphicon glyphicon-search"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <nav id="my-menu">
+                <ul>
+                    <li><a class="my-close-button" href="#/">Home</a></li>
+                    <li>
+                        <span>Jadoo & Shava Tv</span>
+                        <ul>
+                            <li><a href="#/iptv/1/Jadoo Reviews" class="my-close-button" data-title="Jadoo Tv Reviews">Jadoo & Shava Reviews</a></li>
+                            <li><a href="#/iptv/55/Remote Control" class="my-close-button" data-title="Jadoo Tv Reviews">Remote Control</a></li>
+                            <li><a href="#/iptv/3,44/Other Boxes" class="my-close-button" data-title="Jadoo Tv Reviews">Other Boxes</a></li>
+                            <li><a href="#/iptv/4/Issues" class="my-close-button" data-title="Issues & Fixes">Issues & Fixes</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <span>Tv Shows</span>
+                        <ul>                            
+                            <li class="my-close-button"><a href="#/ondemand/UCEeEQxm6qc_qaTE7qTV5aLQ/Hum%20Tv">Hum Tv</a></li>
+                            <li class="my-close-button"><a href="#/ondemand/UCdmkPG3FG48A27-PrD-lC8A/A%20Plus">A Plus Ent.</a></li>
+                            <li class="my-close-button"><a href="#/ondemand/UCppHT7SZKKvar4Oc9J4oljQ/Zee%20Tv">Zee Tv</a></li>
+                            <li class="my-close-button"><a href="#/ondemand/UC0oqOax5uR1CSiSgefakAlw/Talk%20Shows">Talk Shows</a></li>
+                            <li class="my-close-button"><a href="#/ondemand/UCrUHmmZquigJRCZFwW0gL3Q/Dramas%20Online">Dramas online</a></li>
+                            <li>
+                                <span>Morning Shows</span>
+                                <ul>
+                                    <li>
+                                        <a class="my-close-button"  data-channelid="UCyylXQuPCJD4RmkcCxpkaKw" data-relatedtovideoid="" data-videoduration="" data-videotype="" data-keyword="Jago Pakistan Jago"
+                                           href="" ng-click="search($event)">Jagoo Pakistan</a>
+                                    </li>
+                                    <li>
+                                        <a class="my-close-button"  data-channelid="UC7vogApYG1nYZ5bMB6XM-GQ" data-relatedtovideoid="" data-videoduration="" data-videotype="" data-keyword="Good morning pakistan"
+                                           href="" ng-click="search($event)">Good Morning Pakistan</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                     <span>Movies</span>
+                        <ul>
+                            <li class="my-close-button"><a data-channelid="" data-relatedtovideoid="" data-videoduration="long" data-videotype="" data-keyword="bollywood movies 2015 full movies" data-order="relevance"
+   href="" ng-click="search($event)" class="my-close-button">Bollywood</a>
+                            </li>
+                            <li >
+                                <a data-channelid="" data-relatedtovideoid="" data-videoduration="long" data-videotype="" data-keyword="punjabi movies 2015 full movie"
+                                   href="" ng-click="search($event)" class="my-close-button">Punjabi</a>
+                            </li>
+                            <li >
+                                <a data-channelid="" data-relatedtovideoid="" data-videoduration="long" data-videotype="" data-keyword="tamil movies 2014 full movie in hindi dubbed"
+                                   href="" ng-click="search($event)" class="my-close-button">Tamil</a>
+                            </li>
+                            <li >
+                                <a href="#/ondemand/UCHiL-zHyeOnjb44ZcmZpIMw/By%20Genre" class="my-close-button">By Genre</a>
+                            </li>
+
+                        </ul>
+                    </li>
+
+                    <li>
+                        <span>Music</span>
+                        <ul>
+                            <li class="my-close-button">
+                                                            <a data-channelid="" data-relatedtovideoid="" data-videoduration="" data-order="date" data-videotype="" data-keyword="Bollywood Latest Music"
+                                                               href="" ng-click="search($event)">Latest Music</a></li>
+                            <li class="my-close-button"><a href="#/ondemand/UCbTLwN10NoCU4WDzLf1JMOA/Yash%20Raj">Yash Raj</a></li>
+                            <li class="my-close-button"><a href="#/ondemand/UCX52tYZiEh_mHoFja3Veciw/Eros">Eros</a></li>
+                            <li class="my-close-button"><a href="#/ondemand/UCq-Fj5jknLsUf-MWSy4_brA/TSeries">T-Series</a></li>
+                            <li class="my-close-button">
+                                <a data-channelid="" data-relatedtovideoid="" data-videoduration="" data-videotype="" data-keyword="bollywook mashup 2015"
+                                   href="" ng-click="search($event)" class="my-close-button">Mashup</a>
+                            </li>
+                            <li><a href="#/ondemand/UCBnZ16ahKA2DZ_T5W0FPUXg/Kids" class="my-close-button">Kids</a></li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <span>News</span>
+                        <ul>
+                    <li class="my-close-button">
+                        <a data-channelid="UCNzB1D04qyZ2BApn_kSkSUg" data-relatedtovideoid="" data-videoduration="" data-videotype="" data-keyword="Geo"
+                           href="" ng-click="search($event)">Geo News</a>
+                    </li>
+                    <li class="my-close-button">
+                        <a data-channelid="UCNzB1D04qyZ2BApn_kSkSUg" data-relatedtovideoid="" data-videoduration="" data-videotype="" data-keyword="Ary"
+                           href="" ng-click="search($event)">Ary News</a>
+                    </li>
+                    <li class="my-close-button">
+                        <a data-channelid="UCNzB1D04qyZ2BApn_kSkSUg" data-relatedtovideoid="" data-videoduration="" data-videotype="" data-keyword="Express"
+                           href="" ng-click="search($event)">Express News</a>
+                    </li>
+                            <li class="my-close-button">
+                                <a data-channelid="UC5wcmA1yYRxfvLcggWXnWvA" data-relatedtovideoid="" data-videoduration="" data-videotype="" data-keyword="News Tube"
+                                   href="" ng-click="search($event)">News Tube</a>
+                            </li>
+                </ul>
+            </nav>
+        </div>
+
+        <div id="contentView">
+            <div class="row">
+                <div id="myView" class="reveal-animation" ng-view></div>
+            </div>
+
+
+        </div>
+
+
+
+
+
+    </div>
+
+
+
+    <script src="Scripts/bootstrap.min.js"></script>
+
+    <script src="Scripts/angular.min.js"></script>
+    <script src="Scripts/angular-route.min.js"></script>
+    <script src="Scripts/angular-animate.min.js"></script>
+    <script src="Scripts/angular-touch.min.js"></script>
+
+    <script src="Scripts/app/jsscroll.js"></script>
+    <script src="Scripts/app/app.js"></script>
+    <script src="Scripts/app/factory.js"></script>
+    <script src="Scripts/app/Blogscontroller.js"></script>
+    <script src="Scripts/app/BlogController.js"></script>
+    <script src="Scripts/app/PostController.js"></script>
+    <script src="Scripts/app/DemandController.js"></script>
+    <script src="Scripts/app/mainController.js"></script>
+    <script src="Scripts/app/SearchController.js"></script>
+    <script src="Scripts/app/SliderController.js"></script>
+
+    <script src="Scripts/loading-bar.min.js"></script>
+
+    <script type="text/javascript" src="cordova.js"></script>
+
+
+
+
+    
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

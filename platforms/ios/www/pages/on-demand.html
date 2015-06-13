@@ -1,0 +1,18 @@
+﻿<div class="col-md-12 " style="padding-top:5px;">
+
+    <ul class="appleLst">
+        <li ng-repeat="playlist in playLists">
+          
+            <a href="#BrowsePlayList/{{playlist.id}}/{{playlist.snippet.title}}">
+                {{playlist.snippet.title}}
+            </a>
+
+        </li>
+    </ul>
+
+    <div>
+        <a ng-click="nextListsPage()" href="" id="nPage" class="btn btn-info">Next Page</a>
+        <a href="" ng-click="previousListsPage()" id="pPage" class="btn btn-info">Previous Page</a>
+    </div>
+    <p>&nbsp;</p>
+</div>

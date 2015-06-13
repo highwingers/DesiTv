@@ -1,0 +1,19 @@
+﻿                <!-- Blog Data-->
+<div class="col-md-12 " style="padding-top:5px;">
+    <div class="panel panel-success">
+        <div class="panel-heading text-center">
+                <b>{{blogDataResult.ArticleTitle}}</b>            
+        </div>
+        <div class="panel-body">
+            <div ng-bind-html="blogDataResult.ArticleBody | unsafe"></div>
+        </div>
+    </div>
+    <!-- Comments -->
+    <div>
+        <a href="#addComment/{{myBlogID}}" class="btn btn-info">Leave Comment</a>  
+        <a href="#readComment/{{myBlogID}}" class="btn btn-info">Read Comments</a>
+    </div>
+
+    <div>&nbsp;</div>
+</div>
+

@@ -1,0 +1,21 @@
+{
+    "version": "1.0.1",
+    "name": "com.bunkerpalace.cordova.youtubevideoplayer",
+    "cordova_name": "CordovaYoutubeVideoPlayer",
+    "description": "Play Youtube Videos in a native Video Player on Android & iOS.",
+    "keywords": [
+        "video",
+        "youtube",
+        "videoplayer"
+    ],
+    "platforms": [
+        "android",
+        "ios"
+    ],
+    "engines": [
+        {
+            "name": "cordova",
+            "version": ">=3.0.0"
+        }
+    ]
+}

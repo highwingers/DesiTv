@@ -1,0 +1,27 @@
+﻿
+
+    <div class="col-sm-12 col-xs-12 col-md-12 col-lg-12" style="padding-top:5px;display:none" id="animateDiv">
+
+    <form novalidate name="postBlog" ng-submit="addBlog()">
+        <input required type="text" ng-model="blog.BlogTitle" name="BlogTitle" placeholder="Give your Post a Title" class="form-control" />
+        <textarea rows="7" required placeholder="Enter detailed information for your post" class="form-control" ng-model="blog.BlogBody"></textarea>
+        <input required type="text" ng-model="blog.name" placeholder="Your Name" class="form-control" />
+        <input type="email" ng-model="blog.email" placeholder="Your Email" class="form-control" />
+        <select required ng-model="blog.Category" class="form-control">
+            <option value="" selected disabled>Select Category</option>
+            <option value="1">Jadoo Tv Reviews</option>
+            <option value="55">Remote Control</option>
+            <option value="3">Other Boxes</option>
+            <option value="4">Issues & Fixes</option>
+            <option value="14">Other</option>
+        </select>
+        <br />
+        <input ng-disabled="postBlog.$invalid" type="submit" value="Add new Post" class="form-control  btn-success" />
+    </form>
+
+</div>
+<script>
+    $().ready(function () {
+        $("#animateDiv").show();
+    })
+</script>

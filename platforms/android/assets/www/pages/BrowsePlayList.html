@@ -1,0 +1,13 @@
+﻿<div class="col-md-12 " style="padding-top:5px;">
+
+    <ul class="appleLst">
+        <li ng-repeat="playlist in browsePlayLists">
+            <!--<a href="#/play/{{playlist.snippet.resourceId.videoId}}/{{playlist.snippet.title}}">-->
+            <a href="" ng-click="playVideo('{{playlist.snippet.resourceId.videoId}}')">
+                <img class="img-responsive" ng-src="{{playlist.snippet.thumbnails.default.url}}" style="float:left;padding-right:3px;" />     {{playlist.snippet.title}}
+            </a>
+            <br style="clear:both" />
+        </li>
+    </ul>
+
+</div>

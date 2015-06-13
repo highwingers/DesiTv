@@ -1,0 +1,23 @@
+﻿
+    <div class="row" style="padding:3px;">
+        <div class="col-sm-12 col-xs-12 col-md-12 col-lg-12" >
+            <div>
+
+
+                <!--Blog Search Results Div-->
+                <div  ng-show="blogsDiv" infinite-scroll='loadMore()' infinite-scroll-immediate-check="true" infinite-scroll-distance='2' infinite-scroll-disabled="!blogsDiv">
+                    <ul class="appleLst">
+                        <li ng-repeat="blog in blogResults">
+                            <a href="#blog/{{blog.BlogID}}" ng-click="blogData($event)" data-blogid="{{blog.BlogID}}">
+                                {{blog.ArticleTitle}} -   ({{blog.Hits | number}} Views)
+                            </a>
+
+                        </li>
+                    </ul>
+                    <div ng-show='busy'>Loading data...</div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+

@@ -1,0 +1,3 @@
+C:\Cordova\DesiTv\platforms\android\build\intermediates\classes\debug
+C:\Cordova\DesiTv\platforms\android\build\intermediates\pre-dexed\debug\openyoutubeactivity-ffe3340e2ec3954ae079d9f0fb1fe2bc505964c6.jar
+C:\Cordova\DesiTv\platforms\android\build\intermediates\pre-dexed\debug\classes-589485bd67920a692b2f68c178584632353aeb87.jar

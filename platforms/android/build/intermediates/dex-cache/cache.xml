@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="C:\Cordova\DesiTv\platforms\android\libs\openyoutubeactivity.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="4a7617dc7c7ddf194be467f707df4d77b3850cde">
+        <dex dex="C:\Cordova\DesiTv\platforms\android\build\intermediates\pre-dexed\debug\openyoutubeactivity-ffe3340e2ec3954ae079d9f0fb1fe2bc505964c6.jar" />
+    </item>
+    <item
+        jar="C:\Cordova\DesiTv\platforms\android\build\intermediates\exploded-aar\android\CordovaLib\unspecified\debug\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="4f4733620bea56d4dfae9d57a98567df529d0ddd">
+        <dex dex="C:\Cordova\DesiTv\platforms\android\build\intermediates\pre-dexed\debug\classes-589485bd67920a692b2f68c178584632353aeb87.jar" />
+    </item>
+    <item
+        jar="C:\Cordova\DesiTv\platforms\android\build\intermediates\exploded-aar\android\CordovaLib\unspecified\release\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="7097f89044c5a6d381b35dfd276ca9583a5fe75e">
+        <dex dex="C:\Cordova\DesiTv\platforms\android\build\intermediates\pre-dexed\release\classes-60cc8a5bb7c96aafdc7294252bfe5ad2440a82b6.jar" />
+    </item>
+
+</items>

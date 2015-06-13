@@ -1,0 +1,11 @@
+﻿<div class="col-md-12 " style="padding-top:5px;">
+    <div>
+        <form data-ajax="false" name="cmtSubmit" ng-submit="saveComment()">
+            <h4>Leave a comment:</h4>
+            <input name="cname" ng-model="comment.name" type="text" required placeholder="Enter Name" class="form-control" />
+            <input name="cemail" ng-model="comment.email" required type="email" placeholder="Enter Email" class="form-control" />
+            <textarea name="ccomment" ng-model="comment.comment" required placeholder="Enter Comment" class="form-control"></textarea>
+            <input ng-disabled="cmtSubmit.$invalid" type="submit" value="Save Comment" id="" class="form-control" />
+        </form>
+    </div>
+</div>

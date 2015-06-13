@@ -1,0 +1,19 @@
+﻿<div class="col-md-12 " style="padding-top:5px;">
+    <div infinite-scroll='loadMoreComments()' infinite-scroll-immediate-check="true" infinite-scroll-distance='2'>
+        <h3>Comments for this blog</h3>
+        <div class="panel panel-info" ng-repeat="comment in CommentSettings.commentResults">
+            <div class="panel-heading">{{comment.cname}}</div>
+            <div class="panel-body" style="overflow-x:hidden">
+                <div ng-bind-html="comment.ccomment | unsafe"></div>
+                <div><br /><i>Posted on: {{comment.cdate | date}}</i></div>
+            </div>
+        </div>
+
+        <div ng-show='CommentSettings.busy'>Loading Comments...</div>
+    </div>
+</div>
+<script>
+    $().ready(function () {
+        window.scrollTo(0, 0);
+    })
+</script>
