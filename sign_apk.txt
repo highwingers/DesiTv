@@ -3,7 +3,7 @@ cordova build --release android
 
 keytool -genkey -v -keystore dzone.keystore -alias dzone -keyalg RSA -keysize 2048 -validity 10000
 
-(pwd: ab...4)
+(pwd: a....4)
 
 
 jarsigner -verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore dzone.keystore android-release-unsigned.apk dzone
