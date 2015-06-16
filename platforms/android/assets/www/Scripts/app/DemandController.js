@@ -64,9 +64,7 @@
         }
 
 
-        $scope.playVideo = function (v) {            
-            dataFactory.getValue("SearchController").playVideo(v)
-        }
+
 
 
     }]);

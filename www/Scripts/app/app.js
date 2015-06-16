@@ -4,7 +4,7 @@
 
     zoneApp.config(['$routeProvider', '$locationProvider', function ($routeProvider, $locationProvider) {
         $routeProvider
-            .when('/search/:Title', {
+            .when('/search/:qryID/:Title', {
                 templateUrl: 'pages/search.html',
                 controller: 'SearchController'
             })
@@ -28,10 +28,15 @@
             templateUrl: 'pages/BrowsePlayList.html',
             controller: 'DemandController'
             })
+            .when('/BrowsePlayListById/:qryID/:Title', {
+                templateUrl: 'pages/BrowsePlayListById.html',
+                controller: 'DemandController'
+            })
             .when('/play/:videoID/:Title', {
             templateUrl: 'pages/play.html',
             controller: 'DemandController'
-             })
+            })
+
             .when('/blog/:blogID', {
             templateUrl: 'pages/showBlog.html',
             controller: 'BlogController'
@@ -44,7 +49,8 @@
                 templateUrl: 'pages/slider.html',
                 controller: 'SliderController'
             })
-            .when('/', { redirectTo: '/Slider/Home' })
+        .when('/', { redirectTo: '/BrowsePlayListById/26/Home' })
+        //.when('/', { redirectTo: '/iptv/1/Test' })
 
     }]);
 
@@ -65,7 +71,7 @@
             $rootScope.TitleBar = $routeParams.Title;
 
             $rootScope.showSearch = true;
-            if (current.$$route.originalPath == "/iptv/:cats/:Title" || current.$$route.originalPath == "/ondemand/:channel/:Title" || current.$$route.originalPath == '/search/:Title' || current.$$route.originalPath == '/Slider/:Title') {
+            if (current.$$route.originalPath == "/iptv/:cats/:Title" || current.$$route.originalPath == "/ondemand/:channel/:Title" || current.$$route.originalPath == '/search/:qryID/:Title' || current.$$route.originalPath == '/BrowsePlayListById/:qryID/:Title') {
                 $rootScope.isBlogsPage = true;
             } else {
                 $rootScope.isBlogsPage = false;
@@ -76,6 +82,20 @@
         $rootScope.goBack = function () {
             window.history.back();
         }
+
+        $rootScope.playYoutubeVideo = function (v) {
+            if (window.cordova) {
+                //var ref = cordova.InAppBrowser.open('http://knowlegezone.com/pages/player_wrapper.aspx?v=' + v, '_blank', 'location=yes,zoom=no');
+                //YoutubeVideoPlayer.openVideo(v);
+                VideoPlayer.play("https://www.youtube.com/watch?v=" + v);
+                //VideoPlayer.play("https://www.youtube.com/watch?v=en_sVVjWFKk");
+            } else {
+                window.open('http://knowlegezone.com/pages/player_wrapper.aspx?v=' + v, 'myWin', 'width:100%')
+            }
+
+        }
+
+
 
 
     }]);

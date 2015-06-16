@@ -47,17 +47,7 @@
 
 
 
-        $scope.playVideo = function (v) {
-            if (window.cordova) {
-                //var ref = cordova.InAppBrowser.open('http://knowlegezone.com/pages/player_wrapper.aspx?v=' + v, '_blank', 'location=yes,zoom=no');
-                //YoutubeVideoPlayer.openVideo(v);
-                VideoPlayer.play("https://www.youtube.com/watch?v=" + v);
-                //VideoPlayer.play("https://www.youtube.com/watch?v=en_sVVjWFKk");
-            } else {
-                window.open('http://knowlegezone.com/pages/player_wrapper.aspx?v=' + v, 'myWin', 'width:100%')
-            }
 
-        }
 
 
     }]);

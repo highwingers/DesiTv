@@ -1,0 +1,97 @@
+﻿
+                <ul>
+                    <li><a class="my-close-button" href="#/">Home</a></li>
+                    <li>
+                        <span>Jadoo & Shava Tv</span>
+                        <ul>
+                            <li><a href="#/iptv/1/Jadoo Reviews" class="my-close-button" data-title="Jadoo Tv Reviews">Jadoo & Shava Reviews</a></li>
+                            <li><a href="#/iptv/55/Remote Control" class="my-close-button" data-title="Jadoo Tv Reviews">Remote Control</a></li>
+                            <li><a href="#/iptv/3,44/Other Boxes" class="my-close-button" data-title="Jadoo Tv Reviews">Other Boxes</a></li>
+                            <li><a href="#/iptv/4/Issues" class="my-close-button" data-title="Issues & Fixes">Issues & Fixes</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <span>Tv Shows</span>
+                        <ul>
+                            <li class="my-close-button"><a href="#/ondemand/UCEeEQxm6qc_qaTE7qTV5aLQ/Hum%20Tv">Hum Tv</a></li>
+                            <li class="my-close-button"><a href="#/ondemand/UCdmkPG3FG48A27-PrD-lC8A/A%20Plus">A Plus Ent.</a></li>
+                            <li class="my-close-button"><a href="#/ondemand/UCppHT7SZKKvar4Oc9J4oljQ/Zee%20Tv">Zee Tv</a></li>
+                            <li class="my-close-button"><a href="#/ondemand/UC0oqOax5uR1CSiSgefakAlw/Talk%20Shows">Talk Shows</a></li>
+                            <li class="my-close-button"><a href="#/ondemand/UCrUHmmZquigJRCZFwW0gL3Q/Dramas%20Online">Dramas online</a></li>
+                            <li>
+                                <span>Morning Shows</span>
+                                <ul>
+                                    <li>
+                                        <a class="my-close-button" data-channelid="UCyylXQuPCJD4RmkcCxpkaKw" data-relatedtovideoid="" data-videoduration="" data-videotype="" data-keyword="Jago Pakistan Jago"
+                                           href="" ng-click="search($event)">Jagoo Pakistan</a>
+                                    </li>
+                                    <li>
+                                        <a class="my-close-button" data-channelid="UC7vogApYG1nYZ5bMB6XM-GQ" data-relatedtovideoid="" data-videoduration="" data-videotype="" data-keyword="Good morning pakistan"
+                                           href="" ng-click="search($event)">Good Morning Pakistan</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <span>Movies</span>
+                        <ul>
+                            <li class="my-close-button">
+                                <a data-channelid="" data-relatedtovideoid="" data-videoduration="long" data-videotype="" data-keyword="bollywood movies 2015 full movies" data-order="relevance"
+                                   href="" ng-click="search($event)" class="my-close-button">Bollywood</a>
+                            </li>
+                            <li>
+                                <a data-channelid="" data-relatedtovideoid="" data-videoduration="long" data-videotype="" data-keyword="punjabi movies 2015 full movie"
+                                   href="" ng-click="search($event)" class="my-close-button">Punjabi</a>
+                            </li>
+                            <li>
+                                <a data-channelid="" data-relatedtovideoid="" data-videoduration="long" data-videotype="" data-keyword="tamil movies 2014 full movie in hindi dubbed"
+                                   href="" ng-click="search($event)" class="my-close-button">Tamil</a>
+                            </li>
+                            <li>
+                                <a href="#/ondemand/UCHiL-zHyeOnjb44ZcmZpIMw/By%20Genre" class="my-close-button">By Genre</a>
+                            </li>
+
+                        </ul>
+                    </li>
+
+                    <li>
+                        <span>Music</span>
+                        <ul>
+                            <li class="my-close-button">
+                                <a data-channelid="" data-relatedtovideoid="" data-videoduration="" data-order="date" data-videotype="" data-keyword="Bollywood Latest Music"
+                                   href="" ng-click="search($event)">Latest Music</a>
+                            </li>
+                            <li class="my-close-button"><a href="#/ondemand/UCbTLwN10NoCU4WDzLf1JMOA/Yash%20Raj">Yash Raj</a></li>
+                            <li class="my-close-button"><a href="#/ondemand/UCX52tYZiEh_mHoFja3Veciw/Eros">Eros</a></li>
+                            <li class="my-close-button"><a href="#/ondemand/UCq-Fj5jknLsUf-MWSy4_brA/TSeries">T-Series</a></li>
+                            <li class="my-close-button">
+                                <a data-channelid="" data-relatedtovideoid="" data-videoduration="" data-videotype="" data-keyword="bollywook mashup 2015"
+                                   href="" ng-click="search($event)" class="my-close-button">Mashup</a>
+                            </li>
+                            <li><a href="#/ondemand/UCBnZ16ahKA2DZ_T5W0FPUXg/Kids" class="my-close-button">Kids</a></li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <span>News</span>
+                        <ul>
+                            <li class="my-close-button">
+                                <a data-channelid="UCNzB1D04qyZ2BApn_kSkSUg" data-relatedtovideoid="" data-videoduration="" data-videotype="" data-keyword="Geo"
+                                   href="" ng-click="search($event)">Geo News</a>
+                            </li>
+                            <li class="my-close-button">
+                                <a data-channelid="UCNzB1D04qyZ2BApn_kSkSUg" data-relatedtovideoid="" data-videoduration="" data-videotype="" data-keyword="Ary"
+                                   href="" ng-click="search($event)">Ary News</a>
+                            </li>
+                            <li class="my-close-button">
+                                <a data-channelid="UCNzB1D04qyZ2BApn_kSkSUg" data-relatedtovideoid="" data-videoduration="" data-videotype="" data-keyword="Express"
+                                   href="" ng-click="search($event)">Express News</a>
+                            </li>
+                            <li class="my-close-button">
+                                <a data-channelid="UC5wcmA1yYRxfvLcggWXnWvA" data-relatedtovideoid="" data-videoduration="" data-videotype="" data-keyword="News Tube"
+                                   href="" ng-click="search($event)">News Tube</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
