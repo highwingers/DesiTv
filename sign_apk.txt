@@ -5,7 +5,7 @@ keytool -genkey -v -keystore dzone.keystore -alias dzone -keyalg RSA -keysize 20
 
 (pwd: a....4)
 
-
+(skip above if key is created already using keytook. change to api folder)
 jarsigner -verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore dzone.keystore android-release-unsigned.apk dzone
 
 

@@ -6,6 +6,8 @@
 
         var channel = $routeParams.channel;
         var playList = $routeParams.payListId;
+        var qryID = $routeParams.qryID;
+
 
         $('#nPage').css('visibility', 'hidden');
         $('#pPage').css('visibility', 'hidden');
@@ -21,7 +23,7 @@
 
 
             if (undefined != channel) {
-                var purl = 'http://api.knowlegezone.com/api/Videos/GetPlayListsv3?channel=' + channel
+                var purl = 'http://api.knowlegezone.com/api/Videos/Index?qryID=' + channel
 
                 if (pageToken) {
                     purl = purl + '&pageToken=' + pageToken
@@ -55,7 +57,7 @@
 
         ShowPlayLists();
 
-        // Browse videos within a playlist
+        // Browse videos within a playlist within a channel
         if (undefined != playList) {
             $http.get('http://api.knowlegezone.com/api/Videos/GetPlayListv3?playListID=' + playList).
             success(function (data) {
@@ -63,6 +65,13 @@
             });
         }
 
+        // Browse videos within a playlist, by ID which is in DB
+        if (undefined != qryID) {
+            $http.get('http://api.knowlegezone.com/api/Videos/Index?qryID=' + qryID).
+            success(function (data) {
+                $scope.browsePlayLists = data.items;
+            });
+        }
 
 
 

@@ -4,17 +4,26 @@
 
     angular.module('kZoneApp').controller('SearchController', ['$timeout', '$location', '$scope', 'dataFactory', '$window', '$routeParams', '$rootScope', '$http', function ($timeout, $location, $scope, dataFactory, $window, $routeParams, $rootScope, $http) {
 
-        var nextPage = '', prevPage = '', mainController
+        var nextPage = '', prevPage = '', mainController, sQuery = false;
 
-        dataFactory.setValue("SearchController", $scope);
-        mainController = (dataFactory.getValue("mainController"))
+        
+        var term = $routeParams.qryID
+        sQuery = (undefined != dataFactory.getValue("mainController")) ? dataFactory.getValue("mainController").searchQuery() : false ;
 
 
-        function getData(url, pageToken) {
+
+        function getDataV2(pageToken) {
+
+            var url = "http://api.knowlegezone.com/api/Videos/Index?qryID=" + term;
 
             if (pageToken) {
                 url = url + '&pageToken=' + pageToken
             }
+            if (sQuery) {
+                url = url + '&keyword=' + $routeParams.Title
+            }
+
+           // console.log(url)
 
             dataFactory.YouTubeSearch(url)
             .success(function (data) {
@@ -33,31 +42,24 @@
             })
         }
 
-        getData(mainController.mUrl);
+        $().ready(function () {
+            getDataV2('');
+        })
+
+       
 
 
         $scope.nextListsPage = function () {
             window.scrollTo(0, 0)
-            getData(mainController.mUrl, nextPage);
+            getDataV2(nextPage);
         }
         $scope.previousListsPage = function () {
             window.scrollTo(0, 0)
-            getData(mainController.mUrl, prevPage);
+            getDataV2(prevPage);
         }
 
 
 
-        $scope.playVideo = function (v) {
-            if (window.cordova) {
-                //var ref = cordova.InAppBrowser.open('http://knowlegezone.com/pages/player_wrapper.aspx?v=' + v, '_blank', 'location=yes,zoom=no');
-                //YoutubeVideoPlayer.openVideo(v);
-                VideoPlayer.play("https://www.youtube.com/watch?v=" + v);
-                //VideoPlayer.play("https://www.youtube.com/watch?v=en_sVVjWFKk");
-            } else {
-                window.open('http://knowlegezone.com/pages/player_wrapper.aspx?v=' + v, 'myWin', 'width:100%')
-            }
-
-        }
 
 
     }]);
@@ -67,23 +69,6 @@
 
 
 
-
-
-(function () {
-
-
-
-    angular.module('kZoneApp').controller('CommonController', ['$timeout', '$location', '$scope', 'dataFactory', '$window', '$routeParams', '$rootScope', '$http', function ($timeout, $location, $scope, dataFactory, $window, $routeParams, $rootScope, $http) {
-
-
-        $scope.search = function () {
-            alert($scope.keyword)
-            $location.path("search");
-        }
-
-    }]);
-
-})();
 
 
 

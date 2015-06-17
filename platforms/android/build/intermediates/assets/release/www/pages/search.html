@@ -5,8 +5,8 @@
     <ul class="appleLst">
         <li ng-repeat="video in results.items">
             <!--<a href="#/play/{{video.id.videoId}}/{{video.snippet.title}}">-->
-            <a href="" ng-click="playVideo('{{video.id.videoId}}')">
-                <img class="img-responsive"  ng-src="{{video.snippet.thumbnails.default.url}}" style="float:left;padding-right:3px;" />  {{video.snippet.title}}
+            <a href="" ng-click="playYoutubeVideo('{{video.id.videoId}}')">
+                <img class="img-responsive" ng-src="{{video.snippet.thumbnails.default.url}}" style="float:left;padding-right:3px;" />  {{video.snippet.title}}
             </a>
             <br style="clear:both" />
         </li>

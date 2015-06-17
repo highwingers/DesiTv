@@ -66,7 +66,7 @@
                                     <a href="#/postBlog" class="btn btn-default">New Post</a>
                                 </div>
                                 <div ng-show="showSearch" class="valign text-right" style="display:table-cell;width:10%">
-                                    <a href="" onclick="$('#srhBox').toggle();$('#srch-term').focus()" class=" btn btn-default">Search</a>
+                                    <a href="" onclick="$('#srhBox').toggle();$('#srch-term').focus()" class=" btn btn-default"><i class="glyphicon glyphicon-search"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -77,8 +77,7 @@
                     <div class="input-group">
                         <input type="text" ng-model="keyword" class="form-control" style="background-color:#f8f6f6" placeholder="Search Movies, Tv Shows, Sports, Songs..." name="srch-term" id="srch-term">
                         <div class="input-group-btn">
-                            <button data-channelid="" data-relatedtovideoid="" data-videoduration="" data-videotype="" data-keyword="{{keyword}}" data-order=""
-                                    ng-click="search($event);$('#srhBox');" class="btn btn-default" type="submit">
+                            <button ng-click="search();" class="btn btn-default" type="submit">
                                 <i class="glyphicon glyphicon-search"></i>
                             </button>
                         </div>
@@ -100,43 +99,39 @@
                     </li>
                     <li>
                         <span>Tv Shows</span>
-                        <ul>                            
-                            <li class="my-close-button"><a href="#/ondemand/UCEeEQxm6qc_qaTE7qTV5aLQ/Hum%20Tv">Hum Tv</a></li>
-                            <li class="my-close-button"><a href="#/ondemand/UCdmkPG3FG48A27-PrD-lC8A/A%20Plus">A Plus Ent.</a></li>
-                            <li class="my-close-button"><a href="#/ondemand/UCppHT7SZKKvar4Oc9J4oljQ/Zee%20Tv">Zee Tv</a></li>
-                            <li class="my-close-button"><a href="#/ondemand/UC0oqOax5uR1CSiSgefakAlw/Talk%20Shows">Talk Shows</a></li>
-                            <li class="my-close-button"><a href="#/ondemand/UCrUHmmZquigJRCZFwW0gL3Q/Dramas%20Online">Dramas online</a></li>
+                        <ul>
+                            <li class="my-close-button"><a href="#/ondemand/1/Hum%20Tv">Hum Tv</a></li>
+                            <li class="my-close-button"><a href="#/ondemand/5/A%20Plus">A Plus Ent.</a></li>
+                            <li class="my-close-button"><a href="#/ondemand/6/Zee%20Tv">Zee Tv</a></li>
+                            <li class="my-close-button"><a href="#/ondemand/7/Talk%20Shows">Talk Shows</a></li>
+                            <li class="my-close-button"><a href="#/ondemand/8/Dramas%20Online">Dramas online</a></li>
                             <li>
                                 <span>Morning Shows</span>
                                 <ul>
                                     <li>
-                                        <a class="my-close-button"  data-channelid="UCyylXQuPCJD4RmkcCxpkaKw" data-relatedtovideoid="" data-videoduration="" data-videotype="" data-keyword="Jago Pakistan Jago"
-                                           href="" ng-click="search($event)">Jagoo Pakistan</a>
+                                        <a class="my-close-button" href="#/search/14/Jagoo%20%20Pakistan%20Jagoo">Jagoo Pakistan</a>
                                     </li>
                                     <li>
-                                        <a class="my-close-button"  data-channelid="UC7vogApYG1nYZ5bMB6XM-GQ" data-relatedtovideoid="" data-videoduration="" data-videotype="" data-keyword="Good morning pakistan"
-                                           href="" ng-click="search($event)">Good Morning Pakistan</a>
+                                        <a class="my-close-button" href="#/search/15/Good%20Morning%20Pakistan">Good Morning Pakistan</a>
                                     </li>
                                 </ul>
                             </li>
                         </ul>
                     </li>
                     <li>
-                     <span>Movies</span>
+                        <span>Movies</span>
                         <ul>
-                            <li class="my-close-button"><a data-channelid="" data-relatedtovideoid="" data-videoduration="long" data-videotype="" data-keyword="bollywood movies 2015 full movies" data-order="relevance"
-   href="" ng-click="search($event)" class="my-close-button">Bollywood</a>
+                            <li class="my-close-button">
+                                <a href="#/search/23/Bollywood" class="my-close-button">Bollywood</a>
                             </li>
-                            <li >
-                                <a data-channelid="" data-relatedtovideoid="" data-videoduration="long" data-videotype="" data-keyword="punjabi movies 2015 full movie"
-                                   href="" ng-click="search($event)" class="my-close-button">Punjabi</a>
+                            <li>
+                                <a href="#/search/25/Punjabi" class="my-close-button">Punjabi</a>
                             </li>
-                            <li >
-                                <a data-channelid="" data-relatedtovideoid="" data-videoduration="long" data-videotype="" data-keyword="tamil movies 2014 full movie in hindi dubbed"
-                                   href="" ng-click="search($event)" class="my-close-button">Tamil</a>
+                            <li>
+                                <a href="#/search/24/Tamil" class="my-close-button">Tamil (Dubbed)</a>
                             </li>
-                            <li >
-                                <a href="#/ondemand/UCHiL-zHyeOnjb44ZcmZpIMw/By%20Genre" class="my-close-button">By Genre</a>
+                            <li>
+                                <a href="#/ondemand/9/By%20Genre" class="my-close-button">By Genre</a>
                             </li>
 
                         </ul>
@@ -146,39 +141,40 @@
                         <span>Music</span>
                         <ul>
                             <li class="my-close-button">
-                                                            <a data-channelid="" data-relatedtovideoid="" data-videoduration="" data-order="date" data-videotype="" data-keyword="Bollywood Latest Music"
-                                                               href="" ng-click="search($event)">Latest Music</a></li>
-                            <li class="my-close-button"><a href="#/ondemand/UCbTLwN10NoCU4WDzLf1JMOA/Yash%20Raj">Yash Raj</a></li>
-                            <li class="my-close-button"><a href="#/ondemand/UCX52tYZiEh_mHoFja3Veciw/Eros">Eros</a></li>
-                            <li class="my-close-button"><a href="#/ondemand/UCq-Fj5jknLsUf-MWSy4_brA/TSeries">T-Series</a></li>
-                            <li class="my-close-button">
-                                <a data-channelid="" data-relatedtovideoid="" data-videoduration="" data-videotype="" data-keyword="bollywook mashup 2015"
-                                   href="" ng-click="search($event)" class="my-close-button">Mashup</a>
+                                <a href="#/search/21/BollyWood%20Latest%20Music" class="my-close-button">Bollywood Latest Music</a>
                             </li>
-                            <li><a href="#/ondemand/UCBnZ16ahKA2DZ_T5W0FPUXg/Kids" class="my-close-button">Kids</a></li>
+                            <li class="my-close-button"><a href="#/ondemand/10/Yash%20Raj">Yash Raj</a></li>
+                            <li class="my-close-button"><a href="#/ondemand/11/Eros">Eros</a></li>
+                            <li class="my-close-button"><a href="#/ondemand/12/T%20Series">T-Series</a></li>
+                            <li class="my-close-button">
+                                <a href="#/search/22/BollyWood%20Mashup" class="my-close-button">Bollywood Mashup</a>
+                            </li>
+                            <li><a href="#/ondemand/13/Kids" class="my-close-button">Kids</a></li>
                         </ul>
                     </li>
 
                     <li>
                         <span>News</span>
                         <ul>
-                    <li class="my-close-button">
-                        <a data-channelid="UCNzB1D04qyZ2BApn_kSkSUg" data-relatedtovideoid="" data-videoduration="" data-videotype="" data-keyword="Geo"
-                           href="" ng-click="search($event)">Geo News</a>
-                    </li>
-                    <li class="my-close-button">
-                        <a data-channelid="UCNzB1D04qyZ2BApn_kSkSUg" data-relatedtovideoid="" data-videoduration="" data-videotype="" data-keyword="Ary"
-                           href="" ng-click="search($event)">Ary News</a>
-                    </li>
-                    <li class="my-close-button">
-                        <a data-channelid="UCNzB1D04qyZ2BApn_kSkSUg" data-relatedtovideoid="" data-videoduration="" data-videotype="" data-keyword="Express"
-                           href="" ng-click="search($event)">Express News</a>
-                    </li>
                             <li class="my-close-button">
-                                <a data-channelid="UC5wcmA1yYRxfvLcggWXnWvA" data-relatedtovideoid="" data-videoduration="" data-videotype="" data-keyword="News Tube"
-                                   href="" ng-click="search($event)">News Tube</a>
+                                <a href="#/search/16/Geo%20News" class="my-close-button">Geo News</a>
                             </li>
+                            <li class="my-close-button">
+                                <a href="#/search/17/Ary%20News" class="my-close-button">Ary News</a>
+                            </li>
+                            <li class="my-close-button">
+                                <a href="#/ondemand/20/Express%20News" class="my-close-button">Express News</a>
+                            </li>
+                            <li class="my-close-button">
+                                <a href="#/search/18/News%20Tube" class="my-close-button">News Tube</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#/BrowsePlayListById/27/Featured" class="my-close-button">Featured</a>
+                    </li>
                 </ul>
+
             </nav>
         </div>
 
@@ -223,19 +219,17 @@
 
 
 
-    
-</body>
-</html>
-
-
-
-
-
-
-
-
-
-
 
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
