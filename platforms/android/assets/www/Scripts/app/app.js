@@ -13,43 +13,43 @@
                 controller: 'PostController'
             })
             .when('/addComment/:blogID', {
-            templateUrl: 'pages/addComment.html',
-            controller: 'BlogController'
+                templateUrl: 'pages/addComment.html',
+                controller: 'BlogController'
             })
             .when('/readComment/:blogID', {
-            templateUrl: 'pages/readComments.html',
-            controller: 'BlogController'
+                templateUrl: 'pages/readComments.html',
+                controller: 'BlogController'
             })
             .when('/ondemand/:channel/:Title', {
-            templateUrl: 'pages/on-demand.html',
-            controller: 'DemandController'
+                templateUrl: 'pages/on-demand.html',
+                controller: 'DemandController'
             })
             .when('/BrowsePlayList/:payListId/:Title', {
-            templateUrl: 'pages/BrowsePlayList.html',
-            controller: 'DemandController'
+                templateUrl: 'pages/BrowsePlayList.html',
+                controller: 'DemandController'
             })
             .when('/BrowsePlayListById/:qryID/:Title', {
                 templateUrl: 'pages/BrowsePlayListById.html',
                 controller: 'DemandController'
             })
             .when('/play/:videoID/:Title', {
-            templateUrl: 'pages/play.html',
-            controller: 'DemandController'
+                templateUrl: 'pages/play.html',
+                controller: 'DemandController'
             })
 
             .when('/blog/:blogID', {
-            templateUrl: 'pages/showBlog.html',
-            controller: 'BlogController'
-             })
+                templateUrl: 'pages/showBlog.html',
+                controller: 'BlogController'
+            })
             .when('/iptv/:cats/:Title', {
-            templateUrl: 'pages/iptv.html',
-            controller: 'BlogsController'
+                templateUrl: 'pages/iptv.html',
+                controller: 'BlogsController'
             })
             .when('/Slider/:Title', {
                 templateUrl: 'pages/slider.html',
                 controller: 'SliderController'
             })
-        .when('/', { redirectTo: '/BrowsePlayListById/26/Home' })
+        .when('/', { redirectTo: '/BrowsePlayListById/26/Desi Tv Home' })
         //.when('/', { redirectTo: '/iptv/1/Test' })
 
     }]);
@@ -67,7 +67,7 @@
 
     zoneApp.run(['$rootScope', '$location', '$routeParams', function ($rootScope, $location, $routeParams) {
         $rootScope.$on('$routeChangeSuccess', function (e, current, pre) {
-    
+
             $rootScope.TitleBar = $routeParams.Title;
 
             $rootScope.showSearch = true;
@@ -85,9 +85,18 @@
 
         $rootScope.playYoutubeVideo = function (v) {
             if (window.cordova) {
+                var platform = device.platform;
+                //alert(platform)
                 //var ref = cordova.InAppBrowser.open('http://knowlegezone.com/pages/player_wrapper.aspx?v=' + v, '_blank', 'location=yes,zoom=no');
-                //YoutubeVideoPlayer.openVideo(v);
-                VideoPlayer.play("https://www.youtube.com/watch?v=" + v);
+                //47D0B22B device id
+
+                if (platform == "iOS") {
+                    YoutubeVideoPlayer.openVideo(v); // iphone
+                } else {
+                    VideoPlayer.play("https://www.youtube.com/watch?v=" + v); // android
+                }
+
+
                 //VideoPlayer.play("https://www.youtube.com/watch?v=en_sVVjWFKk");
             } else {
                 window.open('http://knowlegezone.com/pages/player_wrapper.aspx?v=' + v, 'myWin', 'width:100%')

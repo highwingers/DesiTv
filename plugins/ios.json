@@ -10,7 +10,7 @@
                     "MediaPlayer.framework": [
                         {
                             "xml": false,
-                            "count": 1
+                            "count": 2
                         }
                     ],
                     "AVFoundation.framework": [
@@ -36,6 +36,12 @@
                             "xml": true,
                             "count": 1
                         }
+                    ],
+                    "SystemConfiguration.framework": [
+                        {
+                            "xml": true,
+                            "count": 1
+                        }
                     ]
                 }
             },
@@ -56,6 +62,30 @@
                         },
                         {
                             "xml": "<feature name=\"Notification\"><param name=\"ios-package\" value=\"CDVNotification\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"StreamingMedia\"><param name=\"ios-package\" value=\"StreamingMedia\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"Device\"><param name=\"ios-package\" value=\"CDVDevice\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"NetworkStatus\"><param name=\"ios-package\" value=\"CDVConnection\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"StatusBar\"><param name=\"ios-package\" value=\"CDVStatusBar\" /><param name=\"onload\" value=\"true\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<preference name=\"StatusBarOverlaysWebView\" value=\"true\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<preference name=\"StatusBarStyle\" value=\"lightcontent\" />",
                             "count": 1
                         }
                     ]
@@ -80,6 +110,18 @@
             "PACKAGE_NAME": "com.knowlegezone.desitv"
         },
         "com.dawsonloudon.videoplayer": {
+            "PACKAGE_NAME": "com.knowlegezone.desitv"
+        },
+        "com.hutchind.cordova.plugins.streamingmedia": {
+            "PACKAGE_NAME": "com.knowlegezone.desitv"
+        },
+        "org.apache.cordova.device": {
+            "PACKAGE_NAME": "com.knowlegezone.desitv"
+        },
+        "org.apache.cordova.network-information": {
+            "PACKAGE_NAME": "com.knowlegezone.desitv"
+        },
+        "org.apache.cordova.statusbar": {
             "PACKAGE_NAME": "com.knowlegezone.desitv"
         }
     },

@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.knowlegezone.desitv" version="1.2.2" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
+<widget id="com.knowlegezone.desitv" version="1.2.5" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
     <preference name="loglevel" value="DEBUG" />
     <feature name="Whitelist">
         <param name="android-package" value="org.apache.cordova.whitelist.WhitelistPlugin" />
@@ -18,11 +18,28 @@
     <feature name="VideoPlayer">
         <param name="android-package" value="com.dawsonloudon.videoplayer.VideoPlayer" />
     </feature>
+    <feature name="StreamingMedia">
+        <param name="android-package" value="com.hutchind.cordova.plugins.streamingmedia.StreamingMedia" />
+    </feature>
+    <feature name="Device">
+        <param name="android-package" value="org.apache.cordova.device.Device" />
+    </feature>
+    <feature name="NetworkStatus">
+        <param name="android-package" value="org.apache.cordova.networkinformation.NetworkManager" />
+    </feature>
+    <feature name="StatusBar">
+        <param name="android-package" value="org.apache.cordova.statusbar.StatusBar" />
+        <param name="onload" value="true" />
+    </feature>
     <widget>
         <feature name="YoutubeVideoPlayer">
             <param name="android-package" value="com.bunkerpalace.cordova.YoutubeVideoPlayer" />
         </feature>
     </widget>
+    <icon density="ldpi" src="res/android/ldpi.png" />
+    <icon density="mdpi" src="res/android/mdpi.png" />
+    <icon density="hdpi" src="res/android/hdpi.png" />
+    <icon density="xhdpi" src="res/android/xhdpi.png" />
     <splash density="land-hdpi" src="res/screen/android/splash-land-hdpi.png" />
     <splash density="land-ldpi" src="res/screen/android/splash-land-ldpi.png" />
     <splash density="land-mdpi" src="res/screen/android/splash-land-mdpi.png" />
@@ -39,6 +56,7 @@
     <author email="skhan@knowlegezone.com" href="http://knowlegezone.com">
     PhoneGap Team
   </author>
+    <preference name="StatusBarBackgroundColor" value="#000000" />
     <preference name="permissions" value="none" />
     <preference name="orientation" value="default" />
     <preference name="target-device" value="universal" />
@@ -75,7 +93,7 @@
     <gap:plugin name="org.apache.cordova.vibration" />
     <icon src="res/icon.png" />
     <preference name="SplashScreen" value="screen" />
-    <preference name="SplashScreenDelay" value="5000" />
+    <preference name="SplashScreenDelay" value="4000" />
     <gap:config-file parent="CFBundleShortVersionString" platform="ios">
         <string>100</string>
     </gap:config-file>

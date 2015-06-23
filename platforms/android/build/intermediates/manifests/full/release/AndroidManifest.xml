@@ -2,8 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.knowlegezone.desitv"
     android:hardwareAccelerated="true"
-    android:versionCode="102020"
-    android:versionName="1.2.2" >
+    android:versionCode="102050"
+    android:versionName="1.2.5" >
 
     <uses-sdk
         android:minSdkVersion="10"
@@ -42,6 +42,14 @@
         <activity
             android:name="com.keyes.youtube.OpenYouTubePlayerActivity"
             android:screenOrientation="landscape" />
+        <activity
+            android:name="com.hutchind.cordova.plugins.streamingmedia.SimpleAudioStream"
+            android:configChanges="orientation|screenSize"
+            android:label="Simple Audio Stream" />
+        <activity
+            android:name="com.hutchind.cordova.plugins.streamingmedia.SimpleVideoStream"
+            android:configChanges="orientation|screenSize"
+            android:label="Simple Video Stream" />
     </application>
 
 </manifest>

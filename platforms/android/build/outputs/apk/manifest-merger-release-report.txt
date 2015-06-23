@@ -81,10 +81,26 @@ ADDED from AndroidManifest.xml:14:9
 		ADDED from AndroidManifest.xml:14:78
 	android:name
 		ADDED from AndroidManifest.xml:14:19
+activity#com.hutchind.cordova.plugins.streamingmedia.SimpleAudioStream
+ADDED from AndroidManifest.xml:15:9
+	android:label
+		ADDED from AndroidManifest.xml:15:66
+	android:configChanges
+		ADDED from AndroidManifest.xml:15:19
+	android:name
+		ADDED from AndroidManifest.xml:15:102
+activity#com.hutchind.cordova.plugins.streamingmedia.SimpleVideoStream
+ADDED from AndroidManifest.xml:16:9
+	android:label
+		ADDED from AndroidManifest.xml:16:66
+	android:configChanges
+		ADDED from AndroidManifest.xml:16:19
+	android:name
+		ADDED from AndroidManifest.xml:16:102
 uses-sdk
-ADDED from AndroidManifest.xml:16:5
+ADDED from AndroidManifest.xml:18:5
 MERGED from android:CordovaLib:unspecified:release:25:5
 	android:targetSdkVersion
-		ADDED from AndroidManifest.xml:16:42
+		ADDED from AndroidManifest.xml:18:42
 	android:minSdkVersion
-		ADDED from AndroidManifest.xml:16:15
+		ADDED from AndroidManifest.xml:18:15
